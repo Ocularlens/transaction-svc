@@ -7,7 +7,7 @@ const server = fastify({ logger: true });
 
 server.register(multer.contentParser);
 
-server.register(baseRoutes, { prefix: "/upload" });
+server.register(baseRoutes, { prefix: "/file" });
 
 const startServer = async () => {
   try {
