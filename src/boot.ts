@@ -1,16 +1,17 @@
 import fastify from "fastify";
-import multer from "fastify-multer";
 import config from "./config";
 import baseRoutes from "./routes/baseRoute";
+import categoryRoutes from "./routes/categoryRoute";
+import connectToDatabase from "./service/databaseService";
 
 const server = fastify({ logger: true });
 
-server.register(multer.contentParser);
-
-server.register(baseRoutes, { prefix: "/file" });
+server.register(baseRoutes, { prefix: "/transaction" });
+server.register(categoryRoutes, { prefix: "/category" });
 
 const startServer = async () => {
   try {
+    await connectToDatabase();
     await server.listen({ port: config.PORT });
   } catch (error) {
     server.log.error(error);
