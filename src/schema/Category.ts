@@ -1,17 +1,25 @@
+import { Static, Type } from "@sinclair/typebox";
 import { Schema, model } from "mongoose";
 
-export interface ICategory {
-  createdByAdmin: boolean;
-  name: string;
-  type: "OUT" | "IN";
+enum Types {
+  OUT,
+  IN,
 }
 
-const categorySchema = new Schema<ICategory>({
-  createdByAdmin: { type: Boolean, required: true, default: true },
-  name: { type: String, required: true },
-  type: { type: String, required: true },
+export const categorySchema = Type.Object({
+  createdByAdmin: Type.Boolean(),
+  name: Type.String(),
+  type: Type.Enum(Types),
 });
 
-const Category = model<ICategory>("categories", categorySchema);
+export type CategoryType = Static<typeof categorySchema>;
+
+const categoryModelSchema = new Schema<CategoryType>({
+  createdByAdmin: { type: Boolean, required: true, default: true },
+  name: { type: String, required: true },
+  type: Types,
+});
+
+const Category = model<CategoryType>("categories", categoryModelSchema);
 
 export default Category;

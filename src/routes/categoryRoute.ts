@@ -2,6 +2,10 @@ import { FastifyInstance } from "fastify";
 
 declare module "fastify" {}
 
-async function categoryRoutes(fastify: FastifyInstance) {}
+async function categoryRoutes(fastify: FastifyInstance) {
+  fastify.post('/', {}, () => {
+    
+  });
+}
 
 export default categoryRoutes;
