@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@fastify/type-provider-typebox": "^4.0.0",
-    "@sinclair/typebox": "^0.32.34",
+    "@sinclair/typebox": "^0.34.22",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
     "fastify": "^4.27.0",
