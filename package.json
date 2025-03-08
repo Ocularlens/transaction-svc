@@ -20,7 +20,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@fastify/type-provider-typebox": "^4.0.0",
+    "@fastify/type-provider-typebox": "^4.1.0",
     "@sinclair/typebox": "^0.32.34",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
