@@ -23,7 +23,7 @@
     "@fastify/type-provider-typebox": "^4.0.0",
     "@sinclair/typebox": "^0.32.34",
     "concurrently": "^8.2.2",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "fastify": "^4.27.0",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.9.5",
