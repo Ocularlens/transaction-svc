@@ -24,7 +24,7 @@
     "@sinclair/typebox": "^0.32.34",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
-    "fastify": "^4.27.0",
+    "fastify": "^5.7.3",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.9.5",
     "uuid": "^10.0.0"
